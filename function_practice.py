@@ -152,6 +152,18 @@ partition([1,2,3,4], isEven) # [[2,4],[1,3]]
 
 
 # def remove_negatives(l) : return list(filter(lambda x:x >= 0, l))
-l = [1,2,3,4,5]
-a = map(lambda x : x, l)
-print (type(filter(lambda x : x, l)))
+# l = [1,2,3,4,5]
+# a = map(lambda x : x, l)
+# print (type(filter(lambda x : x, l)))
+
+
+def interleave(s1, s2):
+    s = ""
+    for ss in zip(*[s1, s2]):
+        s = s + ss[0] + ss[1] 
+    return s
+
+print(interleave("hi", "ha"))
+
+names = [{'first': 'Elie', 'last': 'Schoppik'}, {'first': 'Colt', 'last': 'Steele'}]
+print (dict(zip(*names)))
