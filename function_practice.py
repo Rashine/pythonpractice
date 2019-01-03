@@ -120,16 +120,38 @@ partition([1,2,3,4], isEven) # [[2,4],[1,3]]
 #         return None
 # calculate(make_float=False, operation='add', message='You just added', first=2, second=4) # "You just added 6"
 # calculate(make_float=True, operation='divide', first=3.5, second=5) # "The result is 0.7"
-def calculate(**trytry):
-    if trytry.get("make_float"): 
-        return trytry.get("message","The result is")+" "+str(float(operate(trytry.get("first"), trytry.get("second"), trytry.get("operation"))))
-    else:
-        return trytry.get("message","The result is")+" "+str(int(operate(trytry.get("first"), trytry.get("second"), trytry.get("operation"))))
+# def calculate(**trytry):
+#     if trytry.get("make_float"): 
+#         return trytry.get("message","The result is")+" "+str(float(operate(trytry.get("first"), trytry.get("second"), trytry.get("operation"))))
+#     else:
+#         return trytry.get("message","The result is")+" "+str(int(operate(trytry.get("first"), trytry.get("second"), trytry.get("operation"))))
 
-def operate(f,s,o):
-    if o == "add": return f+s
-    elif o == "subtract": return f-s
-    elif o == "multiply": return f*s
-    elif o == "divide": return f/s
-    else: return None
-print (calculate(make_float=False, operation='add', message='You just added', first=2, second=4))
+# def operate(f,s,o):
+#     if o == "add": return f+s
+#     elif o == "subtract": return f-s
+#     elif o == "multiply": return f*s
+#     elif o == "divide": return f/s
+#     else: return None
+# print (calculate(make_float=False, operation='add', message='You just added', first=2, second=4))
+
+# def twoSum(nums, target):
+#     """
+#     :type nums: List[int]
+#     :type target: int
+#     :rtype: List[int]
+#     """
+#     a ={}
+#     tn = tuple(nums)
+#     for i in range(len(tn)):
+#         if target-tn[i] in a:
+#             return [a[target-tn[i]], i]
+#         else:
+#             a[tn[i]] = i
+
+# print(twoSum([3,2,4], 7))
+
+
+# def remove_negatives(l) : return list(filter(lambda x:x >= 0, l))
+l = [1,2,3,4,5]
+a = map(lambda x : x, l)
+print (type(filter(lambda x : x, l)))
